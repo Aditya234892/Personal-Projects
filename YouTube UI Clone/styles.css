@@ -9,18 +9,12 @@
 body{
     /* background-color: #181818;
     color:  #FFFFFF;*/
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Arial", "sans-serif";
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
     overflow: hidden;
 }
-
-.roboto-medium {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
 
 /* Scroll-Bar */
 
@@ -78,7 +72,7 @@ body{
 .header_search form input{
     width: 600px;
     height: 40px;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     font-size: 15px;
     font-weight: 400;
     border-top-left-radius: 30px;
@@ -150,7 +144,13 @@ body{
     display: flex;
     justify-content: space-around;
     margin: 10px 30px 13px 250px;
+    /* overflow-x: scroll;
+    overflow-y: hidden; */
 }
+
+/* .suggetions::-webkit-scrollbar{
+    display: none;
+} */
 
 .suggetions .suggested{
     background-color: #0000000D;
@@ -260,7 +260,7 @@ body{
 }
 
 .sidebar_category_foot{
-    margin-top: 15px;
+    margin-top: 2px;
     padding: 8px 0px;
 }
 
@@ -284,27 +284,47 @@ body{
     size: px;
 }
 
+.main_content{
+    width: fit-content;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* overflow:scroll; */
+}
 
+/* 
 .videos{
     height: 100vh;
-    width: 85vw;
-    overflow-y: auto;
-    overflow-x: hidden;
-    display: flex;
+    width: 85vw; */
+    /* overflow-y: scroll;
+    overflow-x: hidden; */
+    /* display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
     /* background-color: bisque; */
+    /* position: absolute;
+    left: 210px;
+    top: 130px;
+    height: 100%; */
+    /* border-top: 2px solid black; */
+/* } */
+
+.video_conatainer{
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 90px;
+    height: 100vh;
+    width: 85vw;
     position: absolute;
     left: 210px;
     top: 130px;
     height: 100%;
-    /* border-top: 2px solid black; */
 }
 
-.video_conatainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.video_conatainer::-webkit-scrollbar{
+    display: none;
 }
 
 .video{
@@ -323,6 +343,8 @@ body{
 
 .video-details{
     display: flex;
+    width: 125%;
+    margin-top: 3.5%;
 }
 
 
